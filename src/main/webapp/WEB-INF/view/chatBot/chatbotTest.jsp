@@ -11,6 +11,7 @@
     <style>
         th, td { text-align: center; }
     </style>
+    
 </head>
 <body>
 <%@ include file="../common/top.jsp" %>
@@ -20,15 +21,15 @@
             <%@ include file="../common/aside.jsp" %>
             
             <!-- =================== main =================== -->
-<form action="/goodM/chatbot/gibuni" method="post" enctype="multipart/form-data">
+<form action="/goodM/chatbotTest" method="post" enctype="multipart/form-data">
   <div id="app"></div>
   <script type="text/javascript">
     window.onload=function () {
       const chatBot = chatbotTest.build({
         el: '#app',
-        apiUrl: '${apiUrl}',
+        apiUrl: 'https://ex9av8bv0e.apigw.ntruss.com/custom_chatbot/prod/',
         apiVersion: 'v2',
-        apiToken: '${secretKey}',
+        apiToken: 'aXNtRHVoU1pWbk5Rc3VSZUtEc2hpeWR6SHBweWdrekU=',
         log: true,
         callbacks: {
           success: function (res) {
@@ -45,7 +46,7 @@
       chatBot.sendParamsConfig('open');
     }
   </script>
-  </form>
+</form>
   </div>
   </div>
       <%@ include file="../common/bottom.jsp" %>
