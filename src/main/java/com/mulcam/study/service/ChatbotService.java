@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ChatbotService {
-//  public static String main(String voiceMessage) {
 	@Value("${naver.chatApiUrl}") private String apiUrl;
 	@Value("${naver.chatSecretKey}") private String secretKey;
   public String main(String voiceMessage) {

@@ -18,13 +18,13 @@ $(function(){
     // 별도의 ajax 생성
     function callAjax() {
         $.ajax({
-            url:"chatbotSend2",
+            url:"/goodM/chatbot/chatbot",
             type:"post",
             data:{message: $('#message').val()},
-            success:function(result){
+            success:function(inputText){
                 /* chatBox에 받은 메시지 추가 */
                 $('#chatBox').append('<div class="msgBox receive"><span id="in"><span>챗봇</span><br><span>' +
-                    result +'</span></span></div><br><br>');
+                    text +'</span></span></div><br><br>');
                 // 스크롤해서 올리기
                 $("#chatBox").scrollTop($("#chatBox").prop("scrollHeight"));
             },
@@ -34,3 +34,4 @@ $(function(){
         });
     }
 });
+
