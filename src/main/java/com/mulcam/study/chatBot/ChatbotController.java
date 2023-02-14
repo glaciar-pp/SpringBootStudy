@@ -1,4 +1,4 @@
-package com.example.demo.chatBot;
+package com.mulcam.study.chatBot;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

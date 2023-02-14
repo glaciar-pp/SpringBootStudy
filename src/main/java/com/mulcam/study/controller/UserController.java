@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.entity.User;
-import com.example.demo.service.UserService;
+import com.mulcam.study.entity.User;
+import com.mulcam.study.service.UserService;
 
 @Controller
 @RequestMapping("/goodM/user")

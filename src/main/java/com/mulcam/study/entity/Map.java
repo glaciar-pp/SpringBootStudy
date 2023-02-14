@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.mulcam.study.entity;
 
 public class Map {
 	private String orgName;

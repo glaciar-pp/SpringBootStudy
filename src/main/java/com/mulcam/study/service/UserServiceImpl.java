@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.UserDao;
-import com.example.demo.entity.User;
+import com.mulcam.study.dao.UserDao;
+import com.mulcam.study.entity.User;
 
 @Service
 public class UserServiceImpl implements UserService {

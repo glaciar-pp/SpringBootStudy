@@ -1,4 +1,4 @@
-package com.example.demo.dao;
+package com.mulcam.study.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.example.demo.entity.DiaryBoard;
+import com.mulcam.study.entity.DiaryBoard;
 
 @Mapper
 public interface DiaryBoardDao {

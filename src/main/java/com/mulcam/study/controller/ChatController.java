@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.demo.service.ChatbotService;
+import com.mulcam.study.service.ChatbotService;
 
 @Controller
 @RequestMapping("/goodM/chat")

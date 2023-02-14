@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.service.DiaryService;
+import com.mulcam.study.service.DiaryService;
 
 @Controller
 @RequestMapping("/schedule")

@@ -1,9 +1,8 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.util.List;
 
-import com.example.demo.entity.DiaryBoard;
-
+import com.mulcam.study.entity.DiaryBoard;
 
 public interface DiaryBoardService {
 

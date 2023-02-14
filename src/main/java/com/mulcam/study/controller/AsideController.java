@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
   
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,8 +21,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.demo.service.ImageUtil;
-import com.example.demo.service.MapUtil;
+import com.mulcam.study.service.ImageUtil;
+import com.mulcam.study.service.MapUtil;
+
 
 @Controller
 @RequestMapping("/aside")

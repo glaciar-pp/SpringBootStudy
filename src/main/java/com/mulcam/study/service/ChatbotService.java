@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

@@ -1,10 +1,10 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import com.example.demo.entity.User;
+import com.mulcam.study.entity.User;
 
 public interface UserService {
 	public static final int CORRECT_LOGIN = 0;

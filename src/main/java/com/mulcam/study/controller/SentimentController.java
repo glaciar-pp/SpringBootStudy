@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.service.SentimentUtil;
+import com.mulcam.study.service.SentimentUtil;
 
 @Controller
 @RequestMapping("/goodM/sentiment")

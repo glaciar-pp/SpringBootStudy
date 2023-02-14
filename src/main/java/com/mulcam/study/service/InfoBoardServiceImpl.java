@@ -1,12 +1,12 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.InfoBoardDao;
-import com.example.demo.entity.InfoBoard;
+import com.mulcam.study.dao.InfoBoardDao;
+import com.mulcam.study.entity.InfoBoard;
 
 @Service
 public class InfoBoardServiceImpl implements InfoBoardService {

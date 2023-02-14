@@ -1,4 +1,4 @@
-package com.example.demo.map;
+package com.mulcam.study.map;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.entity.Map;
-import com.example.demo.service.MapService;
+import com.mulcam.study.entity.Map;
+import com.mulcam.study.service.MapService;
 
 @Controller
 @RequestMapping("/goodM/map")

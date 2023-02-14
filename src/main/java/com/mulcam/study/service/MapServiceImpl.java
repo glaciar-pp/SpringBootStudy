@@ -1,12 +1,12 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.MapDao;
-import com.example.demo.entity.Map;
+import com.mulcam.study.dao.MapDao;
+import com.mulcam.study.entity.Map;
 
 @Service
 public class MapServiceImpl implements MapService {

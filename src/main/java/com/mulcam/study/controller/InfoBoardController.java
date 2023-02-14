@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -28,9 +28,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.example.demo.entity.InfoBoard;
-import com.example.demo.service.InfoBoardService;
-import com.example.demo.service.JSONUtil;
+import com.mulcam.study.entity.InfoBoard;
+import com.mulcam.study.service.InfoBoardService;
+import com.mulcam.study.service.JSONUtil;
 
 @Controller
 @RequestMapping("/goodM/infoBoard")

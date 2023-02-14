@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.mulcam.study.controller;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -17,10 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.example.demo.entity.DiaryBoard;
-import com.example.demo.entity.GenBoard;
-import com.example.demo.service.DiaryBoardService;
-import com.example.demo.service.JSONUtil;
+import com.mulcam.study.entity.DiaryBoard;
+import com.mulcam.study.service.DiaryBoardService;
+import com.mulcam.study.service.JSONUtil;
 
 @Controller
 @RequestMapping("/goodM/diaryBoard")

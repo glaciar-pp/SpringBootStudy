@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.mulcam.study.entity;
 /*
 CREATE TABLE diary (
   uid VARCHAR(20) NOT NULL,

@@ -1,11 +1,11 @@
-package com.example.demo.dao;
+package com.mulcam.study.dao;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-import com.example.demo.entity.Map;
+import com.mulcam.study.entity.Map;
 
 @Mapper
 public interface MapDao {

@@ -1,10 +1,10 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Map;
+import com.mulcam.study.entity.Map;
 
 @Service
 public interface MapService {

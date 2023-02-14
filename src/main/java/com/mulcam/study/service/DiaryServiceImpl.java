@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.mulcam.study.service;
 
 import org.springframework.stereotype.Service;
 
