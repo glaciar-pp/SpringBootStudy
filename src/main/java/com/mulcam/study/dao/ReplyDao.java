@@ -1,4 +1,4 @@
-package com.mulcam.study.dao;
+package com.example.demo.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-import com.mulcam.study.entity.Reply;
+import com.example.demo.entity.Reply;
 
 @Mapper
 public interface ReplyDao {

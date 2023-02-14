@@ -1,14 +1,14 @@
-package com.mulcam.study.service;
+package com.example.demo.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mulcam.study.dao.GenBoardDao;
-import com.mulcam.study.dao.ReplyDao;
-import com.mulcam.study.entity.GenBoard;
-import com.mulcam.study.entity.Reply;
+import com.example.demo.dao.GenBoardDao;
+import com.example.demo.dao.ReplyDao;
+import com.example.demo.entity.GenBoard;
+import com.example.demo.entity.Reply;
 
 @Service
 public class GenBoardServiceImpl implements GenBoardService {

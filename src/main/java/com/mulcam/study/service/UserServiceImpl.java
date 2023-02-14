@@ -1,4 +1,4 @@
-package com.mulcam.study.service;
+package com.example.demo.service;
 
 import java.util.List;
 
@@ -8,22 +8,29 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mulcam.study.dao.UserDao;
-import com.mulcam.study.entity.User;
+import com.example.demo.dao.UserDao;
+import com.example.demo.entity.User;
 
 @Service
 public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserDao userDao;
-
+	
+	// 유저 리스트
 	@Override
 	public List<User> getUserList(int page) {
 		int offset = (page - 1) * 10;
 		List<User> list = userDao.getUserList(offset);
 		return list;
 	}
-
+	
+	// 유저 페이지
+	@Override
+	public List<User> getUserInfo() {
+		List<User> userPage = userDao.getUserInfo();
+		return userPage;
+	}
 	@Override
 	public User getUser(String uid) {
 		User user = userDao.getUser(uid);

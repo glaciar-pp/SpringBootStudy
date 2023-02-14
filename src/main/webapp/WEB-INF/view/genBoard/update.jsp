@@ -24,17 +24,17 @@
             	<hr>
                 <div class="row">
 		            <form action="/goodM/genBoard/update" method="post" enctype="multipart/form-data">
-		            	<input type="hidden" name="genBid" value="${general_board.genBid}">
-		            	<input type="hidden" name="uid" value="${general_board.uid}">
+		            	<input type="hidden" name="genBid" value="${genBoard.genBid}">
+		            	<input type="hidden" name="uid" value="${genBoard.uid}">
 		                <table class="table table-borderless">
 		                    <tr class="d-flex">
 		                        <td class="col-1"><label for="title">제목</label></td>
-		                        <td class="col-11" colspan="2"><input class="form-control" type="text" name="title" id="title" value="${general_board.title}"></td>
+		                        <td class="col-11" colspan="2"><input class="form-control" type="text" name="title" id="title" value="${genBoard.title}"></td>
 		                    </tr>
 		                    <tr class="d-flex">
 		                        <td class="col-1"><label for="content">내용</label></td>
 		                        <td class="col-11" colspan="2">
-		                        	<textarea class="form-control" name="content" id="content" rows="10">${general_board.content}</textarea>
+		                        	<textarea class="form-control" name="content" id="content" rows="10">${genBoard.content}</textarea>
 		                        </td>
 		                    </tr>
 		                    <tr class="d-flex">

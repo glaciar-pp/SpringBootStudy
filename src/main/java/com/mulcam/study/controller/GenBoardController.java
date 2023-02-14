@@ -1,4 +1,4 @@
-package com.mulcam.study.controller;
+package com.example.demo.controller;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -28,10 +28,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.mulcam.study.entity.GenBoard;
-import com.mulcam.study.entity.Reply;
-import com.mulcam.study.service.GenBoardService;
-import com.mulcam.study.service.JSONUtil;
+import com.example.demo.entity.GenBoard;
+import com.example.demo.entity.Reply;
+import com.example.demo.service.GenBoardService;
+import com.example.demo.service.JSONUtil;
 
 @Controller
 @RequestMapping("/goodM/genBoard")
@@ -226,29 +226,6 @@ public class GenBoardController {
 		
 		HttpSession session = req.getSession();
 		return "redirect:/goodM/genBoard/list?p=" + session.getAttribute("currentGenBoardPage") + "&f=&q=";
-	}
-	
-	/* 아래의 코드는 과거 데이터와의 호환성 때문에 남겨둠 */
-
-	@GetMapping("/download")
-	public ResponseEntity<Resource> download(HttpServletRequest req) {
-		String fileName = req.getParameter("file");
-		Path path = Paths.get(uploadDir + "/" + fileName);
-		try {
-			String contentType = Files.probeContentType(path);
-			HttpHeaders headers = new HttpHeaders();
-			headers.setContentDisposition(
-				ContentDisposition.builder("attachment")
-					.filename(fileName, StandardCharsets.UTF_8)
-					.build()
-			);
-			headers.add(HttpHeaders.CONTENT_TYPE, contentType);
-			Resource resource = new InputStreamResource(Files.newInputStream(path));
-			return new ResponseEntity<>(resource, headers, HttpStatus.OK);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
 	}
 	
 }

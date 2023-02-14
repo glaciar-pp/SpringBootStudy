@@ -1,9 +1,9 @@
-package com.mulcam.study.service;
+package com.example.demo.service;
 
 import java.util.List;
 
-import com.mulcam.study.entity.GenBoard;
-import com.mulcam.study.entity.Reply;
+import com.example.demo.entity.GenBoard;
+import com.example.demo.entity.Reply;
 
 public interface GenBoardService {
 

@@ -1,4 +1,4 @@
-package com.mulcam.study.controller;
+package com.example.demo.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mulcam.study.entity.User;
-import com.mulcam.study.service.UserService;
+import com.example.demo.entity.User;
+import com.example.demo.service.UserService;
 
 @Controller
 @RequestMapping("/goodM/user")
@@ -93,6 +93,13 @@ public class UserController {
 		}
 	}
 	
+	@GetMapping("/myPage")
+	public String myPage(HttpServletRequest req, Model model) {
+		List<User> userPage = userService.getUserInfo();		
+		model.addAttribute("userPage", userPage);
+		return "user/myPage";
+	}
+
 	//유저의 경우 유저 목록이 아닌 본인정보 페이지로 특정되야하는 부분 있음
 	@GetMapping("/list/{page}")
 	public String list(@PathVariable int page, HttpServletRequest req, Model model) {

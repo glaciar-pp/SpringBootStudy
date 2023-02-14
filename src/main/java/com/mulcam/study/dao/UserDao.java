@@ -1,4 +1,4 @@
-package com.mulcam.study.dao;
+package com.example.demo.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.mulcam.study.entity.User;
+import com.example.demo.entity.User;
 
 @Mapper
 public interface UserDao {
@@ -19,6 +19,10 @@ public interface UserDao {
 			+ "	ORDER BY regDate DESC, uid"
 			+ "	LIMIT 10 OFFSET #{offset}")
 	public List<User> getUserList(int offset);
+	
+	// 유저 페이지
+	@Select("SELECT * FROM users ORDER BY regDate, uid")
+	public List<User> getUserInfo();
 	
 	@Insert("INSERT INTO users VALUES (#{uid}, #{pwd}, #{uname}, #{email}, DEFAULT, DEFAULT)")
 	public void insertUser(User user);

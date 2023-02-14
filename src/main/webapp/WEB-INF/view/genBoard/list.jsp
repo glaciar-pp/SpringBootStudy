@@ -31,7 +31,7 @@
                 <table class="table table-sm table-borderless">
                     <tr class="d-flex">
                         <td class="col-6" style="text-align: left;">
-                            <h3><strong>게시글 목록</strong>
+                            <h3><strong>자유게시판 목록</strong>
                                 <span style="font-size: 0.6em;">
                                     <a href="/goodM/genBoard/write" class="ms-5"><i class="far fa-file-alt"></i> 글쓰기</a>
                                 </span>
@@ -61,26 +61,26 @@
                         <th class="col-2">날짜/시간</th>
                         <th class="col-1">조회수</th>
                     </tr>
-                <c:forEach var="general_board" items="${genBoardList}">
+                <c:forEach var="genBoard" items="${genBoardList}">
                     <tr>
-                        <td>${general_board.genBid}</td>
+                        <td>${genBoard.genBid}</td>
                         <td>
-                        	<a href="/goodM/genBoard/detail?genBid=${general_board.genBid}&uid=${general_board.uid}">${general_board.title}
-                        	<c:if test="${general_board.replyCount ge 1}">
-                            	<span class="text-danger">[${general_board.replyCount}]</span>
+                        	<a href="/goodM/genBoard/detail?genBid=${genBoard.genBid}&uid=${genBoard.uid}">${genBoard.title}
+                        	<c:if test="${genBoard.replyCount ge 1}">
+                            	<span class="text-danger">[${genBoard.replyCount}]</span>
                             </c:if>
                             </a>
                         </td>
-                        <td>${general_board.uname}</td>
+                        <td>${genBoard.uname}</td>
                         <td>
-                        <c:if test="${today eq fn:substring(general_board.modTime, 0, 10)}">
-                        	${fn:substring(general_board.modTime, 11, 19)}
+                        <c:if test="${today eq fn:substring(genBoard.modTime, 0, 10)}">
+                        	${fn:substring(genBoard.modTime, 11, 19)}
                         </c:if>
-                        <c:if test="${not (today eq fn:substring(general_board.modTime, 0, 10))}">
-                        	${fn:substring(general_board.modTime, 0, 10)}
+                        <c:if test="${not (today eq fn:substring(genBoard.modTime, 0, 10))}">
+                        	${fn:substring(genBoard.modTime, 0, 10)}
                         </c:if>
                         </td>
-                        <td>${general_board.viewCount}</td>
+                        <td>${genBoard.viewCount}</td>
                     </tr>
                 </c:forEach>    
                 </table>

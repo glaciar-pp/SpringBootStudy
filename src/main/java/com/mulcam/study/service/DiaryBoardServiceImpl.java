@@ -1,12 +1,12 @@
-package com.mulcam.study.service;
+package com.example.demo.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mulcam.study.dao.DiaryBoardDao;
-import com.mulcam.study.entity.DiaryBoard;
+import com.example.demo.dao.DiaryBoardDao;
+import com.example.demo.entity.DiaryBoard;
 
 @Service 
 public class DiaryBoardServiceImpl implements DiaryBoardService {
