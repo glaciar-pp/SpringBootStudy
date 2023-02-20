@@ -14,7 +14,7 @@
     		const field = document.getElementById("field").value;
     		const query = document.getElementById("query").value;
     		console.log("search()", field, query);
-    		location.href = "/goodM/diaryBoard/list?p=${currentInfoBoardPage}&f=" + field + "&q=" + query;
+    		location.href = "/goodM/diaryBoard/list?p=${currentDiaryBoardPage}&f=" + field + "&q=" + query;
     	}
     </script>
 </head>
@@ -31,7 +31,7 @@
                 <table class="table table-sm table-borderless">
                     <tr class="d-flex">
                         <td class="col-6" style="text-align: left;">
-                            <h3><strong>기분일기</strong>
+                            <h3>기분일기
                                 <span style="font-size: 0.6em;">
                                     <a href="/goodM/diaryBoard/write" class="ms-5"><i class="far fa-file-alt"></i> 글쓰기</a>
                                 </span>
@@ -58,8 +58,8 @@
                         <th class="col-1">번호</th>
                         <th class="col-6">제목</th>
                         <th class="col-2">글쓴이</th>
-                        <th class="col-3">날짜/시간</th>
-                      
+                        <th class="col-2">날짜</th>
+                        <th class="col-1">기분</th>
                     </tr>
                 <c:forEach var="db" items="${diaryBoardList}">
                     <tr>
@@ -69,29 +69,30 @@
                             </a>
                         </td>
                         <td>${db.uname}</td>
-                        <td>${fn:replace(db.modTime, 'T', '&nbsp;&nbsp;')}</td>
+                        <td>${fn:substring(db.modTime, 0,10)}</td>
+                        <td><img src="/img/sentiImage${db.score}.png" height="24px"></td>
                     </tr>
                 </c:forEach>    
                 </table>
-<!--                 <ul class="pagination justify-content-center mt-4"> -->
-<%--                 <c:if test="${currentiaryBoardPage gt 10}"> --%>
-<%--                     <li class="page-item"><a class="page-link" href="/goodM/diaryBoard/list?p=${startPage - 1}&f=${field}&q=${query}">&laquo;</a></li> --%>
-<%--                 </c:if> --%>
-<%--                 <c:if test="${currentiaryBoardPage le 10}"> --%>
-<!--                     <li class="page-item"><a class="page-link" href="#">&laquo;</a></li> -->
-<%--                 </c:if> --%>
-<%--                 <c:forEach var="page" items="${pageList}" varStatus="loop">     --%>
-<%--                     <li class="page-item ${(currentdiaryBoardPage eq page) ? 'active' : ''}"> --%>
-<%--                     	<a class="page-link" href="/goodM/DiaryBoard/list?p=${page}&f=${field}&q=${query}">${page}</a> --%>
-<!--                     </li> -->
-<%--                 </c:forEach>   --%>
-<%--                 <c:if test="${totalPages gt endPage}">                     --%>
-<%--                     <li class="page-item"><a class="page-link" href="/goodM/diaryBoard/list?p=${endPage + 1}&f=${field}&q=${query}">&raquo;</a></li> --%>
-<%--                 </c:if> --%>
-<%--                 <c:if test="${totalPages le endPage}">                     --%>
-<!--                     <li class="page-item"><a class="page-link" href="#">&raquo;</a></li> -->
-<%--                 </c:if> --%>
-<!--                 </ul> -->
+                <ul class="pagination justify-content-center mt-4">
+                <c:if test="${currentDiaryBoardPage gt 10}">
+                    <li class="page-item"><a class="page-link" href="/goodM/diaryBoard/list?p=${startPage - 1}&f=${field}&q=${query}">&laquo;</a></li>
+                </c:if>
+                <c:if test="${currentDiaryBoardPage le 10}">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                </c:if>
+                <c:forEach var="page" items="${pageList}" varStatus="loop">    
+                    <li class="page-item ${(currentDiaryBoardPage eq page) ? 'active' : ''}">
+                    	<a class="page-link" href="/goodM/diaryBoard/list?p=${page}&f=${field}&q=${query}">${page}</a>
+                    </li>
+                </c:forEach>  
+                <c:if test="${totalPages gt endPage}">                    
+                    <li class="page-item"><a class="page-link" href="/goodM/diaryBoard/list?p=${endPage + 1}&f=${field}&q=${query}">&raquo;</a></li>
+                </c:if>
+                <c:if test="${totalPages le endPage}">                    
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </c:if>
+                </ul>
             </div>
             <!-- =================== main =================== -->
             

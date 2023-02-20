@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#CCCCFF">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
         <div class="container-fluid">
             <img src="/img/logo.png" alt="Logo" style="height:80px;" class="rounded-3 mx-2">
             <div class="p-2 justify-content-center rounded">
@@ -20,7 +20,7 @@
             <div class="col-4"></div>
             <div class="col-4">
                 <h3>
-                    <strong>로그인</strong>
+                    로그인
                     <span style="font-size: 0.6em;">
                         <a href="/goodM/user/register" class="ms-5"><i class="fas fa-user-plus"></i> 회원가입</a>
                     </span>
