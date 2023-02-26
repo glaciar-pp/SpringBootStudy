@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <style>
@@ -50,12 +50,17 @@
 	</style>
     <%@ include file="../common/heading.jsp" %>
 </head>
-<body style="margin:40px;">
-    <%@ include file="../common/top.jsp" %>
-            
-            <!-- =================== main =================== -->
-<h3 style="margin-top:80px;">주변 병원/기관 찾기</h3>
-    <div class="map_wrap">
+
+<body style="margin-bottom:100px">
+	<%@ include file="../common/aside.jsp" %>
+	<div class="container-fluid">
+		<header id="header">
+			<a href="/goodM/user/main" class="logo"><strong><img src="/img/logo.png" alt="" width="30px" height="30px"></strong> by 멀캠가네 둘째 조</a>
+		</header>
+		<!-- Content -->
+		<!-- 제목 -->
+		<h2>주변 병원/기관 찾기</h2>
+	<div class="map_wrap">
         <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
     	
         <button id="menuToggle">목록 숨기기</button>
@@ -324,6 +329,7 @@ function displayInfowindow(marker, searchList) {
 
 
 </script>
+</div>
 <%@ include file="../common/bottom.jsp" %>
 </body>
 </html>

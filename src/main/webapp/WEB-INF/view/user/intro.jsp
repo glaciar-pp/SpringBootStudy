@@ -15,37 +15,17 @@
 				<img alt="기분어때 로고" src="/img/logo.png" style="height:80px; margin: 30px">
 				<br>
 				<a href="/goodM/user/intro"><i class="fa-solid fa-house"></i> </a>
-				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-					<i class="fa-solid fa-file-circle-exclamation"></i> 기분일기(작성중)
-				</a>
-					<ul class="dropdown-menu">
-						<li class="nav-item ms-3">
-							<a class="nav-link ${menu eq 'calendar' ? "active" : ''}" style="color: #979797" href="/goodM/calendar/calendar"><i class="fa-solid fa-calendar-days"></i> 기분일기</a>
-						</li>
-						<li class="nav-item ms-3">
-							<a class="nav-link ${menu eq 'diaryBoard' ? "active" : ''}" style="color: #979797" href="/goodM/diaryBoard/list?p=1&f=&q="><i class="fa-solid fa-book"></i> 기분일기</a>
-						</li>
-					</ul>
-				<a class="nav-link ${menu eq 'chat' ? "active" : ''}" href="/goodM/chat/gibuni"><i class="fa-solid fa-robot"></i></i> 챗봇 기부니</a>
-				<a class="nav-link ${menu eq 'map' ? "active" : ''}" href="/goodM/map/kakaoMap"><i class="fa-solid fa-map-location-dot"></i> 병원찾기</a>
-				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-					<i class="far fa-list-alt"></i>게시판
-				</a>
-					<ul class="dropdown-menu">
-						<li>
-							<a class="dropdown-item" style="color: #979797" href="/goodM/infoBoard/list?p=1&f=&q="> 심리건강정보 게시판</a>
-						</li>
-						<li>
-							<a class="dropdown-item" style="color: #979797" href="/goodM/genBoard/list?p=1&f=&q="> 자유게시판</a>
-						</li>
-					</ul>
-				<a class="nav-link ${menu eq 'user' ? "active" : ''}" href="/goodM/user/myPage"><i class="fa-solid fa-user"></i> My page</a>
-				<span class="navbar-text ms-3" style="color: #ffffff">${uname}님 환영합니다.</span>
-				<a class="nav-link" href="/goodM/user/logout"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+				<a class="nav-link" href="#"><i class="fa-solid fa-calendar-days"></i> 기분일기</a>
+				<a class="nav-link" href="#"><i class="fa-solid fa-book"></i> 기분일기</a>
+				<a class="nav-link" href="#"><i class="fa-solid fa-robot"></i> 챗봇 기부니</a>
+				<a class="nav-link" href="#"><i class="fa-solid fa-map-location-dot"></i> 병원찾기</a>
+				<a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info"></i> 심리건강정보</a></li>
+				<a class="dropdown-item" href="#"><i class="far fa-list-alt"></i> 자유게시판</a></li>
+	  			<a class="nav-link" href="/goodM/user/login"><i class="fas fa-sign-out-alt"></i> 로그인</a>
 			</div>
 		</div>
 
-		<div class="col-10">
+		<div class="col-10" style="margin-left:400px">
 			<h1>만나서 반가워요!</h1>
 			<br><br>
 			<p>
