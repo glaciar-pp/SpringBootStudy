@@ -24,7 +24,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.mulcam.study.service.ImageUtil;
 import com.mulcam.study.service.MapUtil;
 
-
 @Controller
 @RequestMapping("/aside")
 public class AsideController {

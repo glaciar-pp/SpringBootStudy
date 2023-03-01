@@ -38,7 +38,7 @@ public class UserController {
 		switch(result) {
 		case UserService.CORRECT_LOGIN:
 			model.addAttribute("msg", session.getAttribute("uname") + "님 환영합니다.");			
-			model.addAttribute("url", "/goodM/user/intro");
+			model.addAttribute("url", "/goodM/user/main");
 			break;
 		case UserService.WRONG_PASSWORD:
 			model.addAttribute("msg", "잘못된 패스워드 입니다. 다시 입력하세요.");
@@ -58,11 +58,14 @@ public class UserController {
 		return "redirect:/goodM/user/login";
 	}
 	
-	@GetMapping("/intro")
-	public String main(HttpServletRequest req, Model model) {
-		String uid = req.getParameter("uid");
-		HttpSession session = req.getSession();
-		return "user/intro";
+	@GetMapping("/main")
+	public String main() {
+		return "user/main";
+	}
+	
+	@GetMapping("/about")
+	public String about() {
+		return "user/about";
 	}
 	
 	@GetMapping("/register")

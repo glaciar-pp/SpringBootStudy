@@ -10,5 +10,7 @@ import com.mulcam.study.entity.Map;
 public interface MapService {
 
 	List<Map> getMapList();
+
+	List<Map> getSearchList(String searchWord);
 	
 }

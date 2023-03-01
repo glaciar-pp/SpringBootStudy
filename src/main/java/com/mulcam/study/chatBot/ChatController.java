@@ -1,4 +1,4 @@
-package com.example.demo.chatBot;
+/*package com.mulcam.study.chatBot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.demo.service.ChatbotService;
+import com.mulcam.study.service.ChatbotService;
 
 @Controller
-@RequestMapping("/goodM/chat")
+@RequestMapping("/goodM/chat") 
 public class ChatController {
 	
 	@Autowired
@@ -33,3 +33,4 @@ public class ChatController {
 	    }
 
 }
+*/

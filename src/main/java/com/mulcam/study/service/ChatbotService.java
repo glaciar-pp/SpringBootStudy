@@ -56,15 +56,12 @@ public class ChatbotService {
 
 				BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 				String decodedString;
-				//String jsonString = "";
 				while ((decodedString = in.readLine()) != null) {
 					 chatbotMessage = decodedString;
                 }
-                //chatbotMessage = decodedString;
                 in.close();
                 // 응답 메세지 출력
                 System.out.println("##3번" + chatbotMessage);
-                //chatbotMessage = jsonToString(chatbotMessage);
             } else {  // Error occurred
                 chatbotMessage = con.getResponseMessage();
             }
@@ -150,14 +147,4 @@ public class ChatbotService {
 	        return requestBody;
 	    }
     
-		/*
-		 * public String jsonToString(String jsonResultStr) { String resultText = ""; //
-		 * API 호출 결과 받은 JSON 형태 문자열에서 텍스트 추출 // JSONParser 사용하지 않음 // images / 0 /
-		 * fields / inferText 추출 JSONObject jsonObj = new JSONObject(jsonResultStr);
-		 * JSONArray chatArray = (JSONArray) jsonObj.get("bubbles"); JSONObject tempObj
-		 * = (JSONObject) chatArray.get(0); JSONObject dataObj = (JSONObject)
-		 * tempObj.get("data"); // tempObj = (JSONObject) dataObj.get("description");
-		 * resultText += (String) dataObj.get("description"); System.out.println("제이슨");
-		 * return resultText; }
-		 */
 	}

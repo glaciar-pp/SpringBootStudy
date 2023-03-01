@@ -6,6 +6,7 @@
 <html lang="ko">
 <head>
     <%@ include file="../common/heading.jsp" %>
+    <%@ include file="../chat/gibuni.jsp" %>
     <script>
     	function search() {
     		const field = document.getElementById("field").value;
@@ -52,7 +53,12 @@
 				<div class="col">
 					<div class="card h-100">
 						<a href="/goodM/infoBoard/detail?infoBid=${info_board.infoBid}&uid=${info_board.uid}">
+							<c:if test="${empty info_board.files}">
 							<img src="/img/기본 썸네일.png" class="card-img-top" alt="thumbnail image">
+							</c:if>
+							<c:if test="${not empty info_board.files}">
+							<img src="/goodM/file/download?file=${info_board.files[1]}" class="card-img-top" alt="thumbnail image">
+							</c:if>
 						</a>
 						<div class="card-body">
 							<h5 class="card-title">${info_board.title}</h5>
